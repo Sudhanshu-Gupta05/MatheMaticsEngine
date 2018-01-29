@@ -1,0 +1,13 @@
+Singleton.d: ../Singleton.cpp ../Singleton.hpp \
+ ../AbstractCalculationEngine.hpp ../Divider.hpp ../Multiplier.hpp \
+ ../GenericEngine.hpp
+
+../Singleton.hpp:
+
+../AbstractCalculationEngine.hpp:
+
+../Divider.hpp:
+
+../Multiplier.hpp:
+
+../GenericEngine.hpp:

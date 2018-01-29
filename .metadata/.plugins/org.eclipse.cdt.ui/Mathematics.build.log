@@ -1,0 +1,20 @@
+16:33:15 **** Incremental Build of configuration Release for project Mathematics ****
+make all 
+Building file: ../src/calc.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/calc.d" -MT"src/calc.d" -o "src/calc.o" "../src/calc.cpp"
+Finished building: ../src/calc.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: Mathematics
+Invoking: GCC C++ Linker
+g++ -L/home/sudhanshu/nuTonomy/Calculation_Engines/Release -o "Mathematics"  ./src/calc.o  ./main.o   -lCalculation_Engines
+Finished building target: Mathematics
+ 
+
+16:33:20 Build Finished (took 5s.374ms)
+

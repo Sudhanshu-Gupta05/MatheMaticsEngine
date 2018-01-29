@@ -1,0 +1,51 @@
+/*
+ * Singleton.hpp
+ *
+ *  Created on: 19-Jan-2018
+ *      Author: sudhanshu
+ */
+
+#ifndef SINGLETON_HPP_
+#define SINGLETON_HPP_
+
+/*standard header files */
+#include <unordered_map>
+#include <string>
+#include <functional>
+#include <mutex>
+
+/*user defined header files */
+#include "AbstractCalculationEngine.hpp"
+#include "Divider.hpp"
+#include "Multiplier.hpp"
+#include "GenericEngine.hpp"
+
+namespace mathematics {
+
+typedef std::function<void(const Icalculation_Engine&)> tSpecializeOperation;
+typedef std::pair<std::string,std::string> allowableOperation;
+
+struct newhash {
+	std::size_t operator()(const allowableOperation &key) const
+	{
+		std::hash<std::string> hasher;
+		return hasher(key.first);
+
+	}
+};
+
+class CalcEngineCreation {
+	void RegisterEngines();
+	virtual void GetEngines(const std::string &EngineName,const std::string &input_type,
+							tSpecializeOperation func = nullptr) { }
+
+	virtual ~CalcEngineCreation() = default;
+
+private:
+	virtual void RegisterNewEngines();
+	std::unordered_map<allowableOperation,Icalculation_Engine*,newhash> available_engines;
+};
+
+}
+
+#endif /* SINGLETON_HPP_ */

@@ -1,0 +1,30 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 28-Jan-2018
+ *      Author: sudhanshu
+ */
+
+
+#include "calc.hpp"
+#include "gtest/gtest.h"
+
+class MathTest:public ::testing::Test {
+public:
+	virtual void SetUp(){
+
+	}
+	virtaul void TearDown() {
+
+	}
+	CalcEngineCreation engine;
+};
+
+extern int no_of_params;
+extern char **parameters;
+
+TEST(Mathematics,start){
+	bool validparams = validCommandLine(no_of_params,parameters);
+	ASSERT_EQ(validparams,true) << "valid args not supplied";
+}
+

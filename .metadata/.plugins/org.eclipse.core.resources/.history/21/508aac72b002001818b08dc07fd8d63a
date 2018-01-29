@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/nuTonomy/Calculation_Engines/Debug" >> ~/.bashrc

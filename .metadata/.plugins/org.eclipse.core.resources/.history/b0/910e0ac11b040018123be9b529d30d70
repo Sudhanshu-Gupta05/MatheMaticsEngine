@@ -1,0 +1,21 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+OBJS += \
+./src/calc.o 
+
+CPP_DEPS += \
+./src/calc.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/calc.o: /home/sudhanshu/nuTonomy/Mathematics/src/calc.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: Cross G++ Compiler'
+	g++ -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -I/home/sudhanshu/nuTonomy/unit_testcase/gTestDir -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

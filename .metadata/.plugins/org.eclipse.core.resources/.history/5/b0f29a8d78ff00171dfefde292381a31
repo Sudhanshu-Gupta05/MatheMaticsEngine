@@ -1,0 +1,130 @@
+/*
+ * calc.cpp
+ *
+ *  Created on: 21-Jan-2018
+ *      Author: sudhanshu
+ */
+
+#include "calc.hpp"
+
+bool validCommandLine(int argc,char **argv)
+{
+	if(argc < 3)
+		return false;
+
+	//use regex
+	 std::regex txt_regex("[a-z]+\\.txt");
+	for(int i = 2; i < argc ; ++i)
+	{
+		std::string text = argv[i];
+		bool match = std::regex_match(text, txt_regex);
+		if(match)
+		{
+			file_list = 1;
+		}
+	}
+
+	return true;
+}
+
+void standardDeviation(const Icalculation_Engine &getCalculationEngine)
+{
+
+}
+
+void listofIntegers(int argc, char **argv,Icalculation_Engine *getCalculationEngine,int &result)
+{
+	std::vector<int> vec;
+	for(int i = 2; i < argc;++i)
+	{
+		vec.push_back(std::stoi(std::string(argv[i])));
+	}
+	if(typeid(*getCalculationEngine) == typeid(Divider))
+	{
+		Divider *divider = dynamic_cast<Divider*>(getCalculationEngine);
+		if(divider!= nullptr)
+		{
+			divider->performOperation(vec,result);
+		}
+	}
+	if(typeid(*getCalculationEngine) == typeid(Multiplier))
+	{
+		Multiplier *multiplier = dynamic_cast<Multiplier*>(getCalculationEngine);
+		if(multiplier!= nullptr)
+		{
+			multiplier->performOperation(vec,result);
+		}
+	}
+	if(typeid(*getCalculationEngine) == typeid(GenericEngine))
+	{
+		GenericEngine *genericEngine = dynamic_cast<GenericEngine*>(getCalculationEngine);
+		if(genericEngine!= nullptr)
+		{
+			std::function<void(const Icalculation_Engine&)> obj(standardDeviation);
+			genericEngine->setCalculateFunction(obj);
+			genericEngine->performSpecilizedOperation();
+		}
+	}
+}
+
+void listofFiles(int argc, char **argv,Icalculation_Engine *getCalculationEngine,int &result)
+{
+	for(int i = 2; i < argc;++i)
+	{
+		std::ifstream open_file(argv[i]);
+
+		if(open_file)
+			continue;
+
+		if(typeid(*getCalculationEngine) == typeid(Divider))
+		{
+			Divider *divider = dynamic_cast<Divider*>(getCalculationEngine);
+			if(divider!= nullptr)
+			{
+				divider->performOperation(open_file,result);
+			}
+		}
+		if(typeid(*getCalculationEngine) == typeid(Multiplier))
+		{
+			Multiplier *multiplier = dynamic_cast<Multiplier*>(getCalculationEngine);
+			if(multiplier!= nullptr)
+			{
+				multiplier->performOperation(open_file,result);
+			}
+		}
+
+	}
+}
+
+int main(int argc,char *argv[])
+{
+
+	bool checkValidArguments = validCommandLine(argc,argv);
+
+	if(!checkValidArguments)
+		return -1;
+
+	//Create and register your engine
+	CalcEngineCreation engine;
+	engine.RegisterEngines();
+
+	auto getCalculationEngine = engine.GetEngines(argv[1],"integer");
+
+	int result = 1;
+
+	if(!file_list)
+	{
+		listofIntegers(argc,argv,getCalculationEngine,result);
+	}
+	else
+	{
+		listofFiles(argc,argv,getCalculationEngine,result);
+	}
+
+	std::cout << std::endl << result << std::endl;
+
+	return 0;
+}
+
+
+

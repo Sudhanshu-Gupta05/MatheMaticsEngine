@@ -1,0 +1,56 @@
+07:35:58 **** Build of configuration Debug for project googleTest ****
+make all 
+Building file: ../src/gtest-all.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-all.d" -MT"src/gtest-all.d" -o "src/gtest-all.o" "../src/gtest-all.cc"
+Finished building: ../src/gtest-all.cc
+ 
+Building file: ../src/gtest-death-test.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-death-test.d" -MT"src/gtest-death-test.d" -o "src/gtest-death-test.o" "../src/gtest-death-test.cc"
+Finished building: ../src/gtest-death-test.cc
+ 
+Building file: ../src/gtest-filepath.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-filepath.d" -MT"src/gtest-filepath.d" -o "src/gtest-filepath.o" "../src/gtest-filepath.cc"
+Finished building: ../src/gtest-filepath.cc
+ 
+Building file: ../src/gtest-port.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-port.d" -MT"src/gtest-port.d" -o "src/gtest-port.o" "../src/gtest-port.cc"
+Finished building: ../src/gtest-port.cc
+ 
+Building file: ../src/gtest-printers.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-printers.d" -MT"src/gtest-printers.d" -o "src/gtest-printers.o" "../src/gtest-printers.cc"
+Finished building: ../src/gtest-printers.cc
+ 
+Building file: ../src/gtest-test-part.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-test-part.d" -MT"src/gtest-test-part.d" -o "src/gtest-test-part.o" "../src/gtest-test-part.cc"
+Finished building: ../src/gtest-test-part.cc
+ 
+Building file: ../src/gtest-typed-test.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest-typed-test.d" -MT"src/gtest-typed-test.d" -o "src/gtest-typed-test.o" "../src/gtest-typed-test.cc"
+Finished building: ../src/gtest-typed-test.cc
+ 
+Building file: ../src/gtest.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest.d" -MT"src/gtest.d" -o "src/gtest.o" "../src/gtest.cc"
+Finished building: ../src/gtest.cc
+ 
+Building file: ../src/gtest_main.cc
+Invoking: GCC C++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/googleTest/include -I/home/sudhanshu/nuTonomy/googleTest -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gtest_main.d" -MT"src/gtest_main.d" -o "src/gtest_main.o" "../src/gtest_main.cc"
+Finished building: ../src/gtest_main.cc
+ 
+Building target: libgoogleTest.a
+Invoking: GCC Archiver
+ar -r  "libgoogleTest.a"  ./src/gtest-all.o ./src/gtest-death-test.o ./src/gtest-filepath.o ./src/gtest-port.o ./src/gtest-printers.o ./src/gtest-test-part.o ./src/gtest-typed-test.o ./src/gtest.o ./src/gtest_main.o   
+ar: creating libgoogleTest.a
+Finished building target: libgoogleTest.a
+ 
+
+07:36:09 Build Finished (took 11s.803ms)
+

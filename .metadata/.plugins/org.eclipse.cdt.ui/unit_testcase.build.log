@@ -1,0 +1,63 @@
+16:40:10 **** Build of configuration Debug for project unit_testcase ****
+make all 
+Building file: /home/sudhanshu/nuTonomy/Mathematics/src/calc.cpp
+Invoking: Cross G++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/unit_testcase/gTestDir -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/calc.d" -MT"src/calc.d" -o "src/calc.o" "/home/sudhanshu/nuTonomy/Mathematics/src/calc.cpp"
+Finished building: /home/sudhanshu/nuTonomy/Mathematics/src/calc.cpp
+ 
+Building file: ../gTestDir/gtest/gtest-all.cc
+Invoking: Cross G++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/unit_testcase/gTestDir -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"gTestDir/gtest/gtest-all.d" -MT"gTestDir/gtest/gtest-all.d" -o "gTestDir/gtest/gtest-all.o" "../gTestDir/gtest/gtest-all.cc"
+Finished building: ../gTestDir/gtest/gtest-all.cc
+ 
+Building file: ../AllTest.cpp
+Invoking: Cross G++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/unit_testcase/gTestDir -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AllTest.d" -MT"AllTest.d" -o "AllTest.o" "../AllTest.cpp"
+Finished building: ../AllTest.cpp
+ 
+Building file: ../test.cpp
+Invoking: Cross G++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/unit_testcase/gTestDir -I/home/sudhanshu/nuTonomy/Calculation_Engines/includes -I/home/sudhanshu/nuTonomy/Mathematics/includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+../test.cpp: In member function ‘virtual void MathTest_operations_Divide_Test::TestBody()’:
+../test.cpp:60:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  char* argv_manual[4] = {"Mathematics","Divider","20","10"};
+                                                           ^
+../test.cpp:60:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:60:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:60:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp: In member function ‘virtual void MathTest_operations_Multiply_Test::TestBody()’:
+../test.cpp:71:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  char* argv_manual[4] = {"Mathematics","Multiplier","20","10"};
+                                                              ^
+../test.cpp:71:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:71:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:71:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp: In member function ‘virtual void MathTest_operations_DivideFiles_Test::TestBody()’:
+../test.cpp:95:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  char* argv_manual[3] = {"Mathematics","Divider","sudhanshu.txt"};
+                                                                 ^
+../test.cpp:95:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:95:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp: In member function ‘virtual void MathTest_operations_MultiplyFiles_Test::TestBody()’:
+../test.cpp:106:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  char* argv_manual[3] = {"Mathematics","Multiplier","sudhanshu.txt"};
+                                                                    ^
+../test.cpp:106:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:106:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp: In member function ‘virtual void MathTest_operations_Generic_Test::TestBody()’:
+../test.cpp:118:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  char* argv_manual[4] = {"Mathematics","Generic","20","10"};
+                                                           ^
+../test.cpp:118:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:118:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../test.cpp:118:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+Finished building: ../test.cpp
+ 
+Building target: unit_testcase
+Invoking: Cross G++ Linker
+g++ -L/home/sudhanshu/nuTonomy/Calculation_Engines/Debug -L/home/sudhanshu/nuTonomy/Mathematics/includes -o "unit_testcase"  ./src/calc.o  ./gTestDir/gtest/gtest-all.o  ./AllTest.o ./test.o   -lpthread -lCalculation_Engines
+Finished building target: unit_testcase
+ 
+
+16:40:19 Build Finished (took 9s.83ms)
+

@@ -1,0 +1,15 @@
+/*
+ * calc.hpp
+ *
+ *  Created on: 21-Jan-2018
+ *      Author: sudhanshu
+ */
+
+#ifndef CALC_HPP_
+#define CALC_HPP_
+
+#include "Singleton.hpp"
+
+using namespace mathematics;
+
+#endif /* CALC_HPP_ */

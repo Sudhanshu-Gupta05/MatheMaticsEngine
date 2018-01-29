@@ -1,0 +1,45 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 28-Jan-2018
+ *      Author: sudhanshu
+ */
+
+
+#include "calc.hpp"
+#include "gtest/gtest.h"
+
+
+/*******Test Data Setup ***************/
+extern int no_of_params;
+extern char **parameters;
+
+class MathTest:public ::testing::Test {
+public:
+	virtual void SetUp(){
+
+	}
+	virtual void TearDown() {
+
+	}
+	CalcEngineCreation engine;
+};
+
+// test data setup done
+
+// Test starts
+
+/*
+ * This test whether command line arguments are correctly supplied
+ */
+TEST(Mathematics,start){
+	bool validparams = validCommandLine(no_of_params,parameters);
+	ASSERT_EQ(validparams,true) << "valid args not supplied";
+}
+
+TEST(Mathematics,enginesetup){
+	CalcEngineCreation engine;
+	engine.RegisterEngines();
+	ASSERT_EQ(engine.enginesEnabled,true) << "Calculation start engine failed";
+}
+

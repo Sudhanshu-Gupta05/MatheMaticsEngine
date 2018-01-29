@@ -1,0 +1,15 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 24-Jan-2018
+ *      Author: sudhanshu
+ */
+
+
+# include "gtest/gtest.h"
+# include "calc.h"
+
+TEST(IntegerFunctionTest, negative) {
+
+}
+

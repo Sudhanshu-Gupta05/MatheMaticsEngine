@@ -1,0 +1,25 @@
+/*
+ * Singleton.cpp
+ *
+ *  Created on: 19-Jan-2018
+ *      Author: sudhanshu
+ */
+
+#include <utility>
+#include "Singleton.hpp"
+
+namespace mathematics {
+
+void CalcEngineCreation::RegisterEngines() {
+	std::call_once (enginesEnabled,registerNewEngines);
+}
+
+void CalcEngineCreation::registerNewEngines() {
+	//Register Multiplier
+	allowableOperation multiplier_Data(std::pair(std::string("Multiplier"),std::string("integer")));
+}
+
+}
+
+
+

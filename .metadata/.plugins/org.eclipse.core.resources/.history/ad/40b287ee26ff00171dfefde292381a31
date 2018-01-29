@@ -1,0 +1,22 @@
+/*
+ * calc.hpp
+ *
+ *  Created on: 21-Jan-2018
+ *      Author: sudhanshu
+ */
+
+#ifndef CALC_HPP_
+#define CALC_HPP_
+
+#include "Singleton.hpp"
+#include <string>
+#include <regex>
+#include <vector>
+#include <typeinfo>
+#include <iostream>
+
+using namespace mathematics;
+
+static int file_list = 0; //default to integers
+
+#endif /* CALC_HPP_ */

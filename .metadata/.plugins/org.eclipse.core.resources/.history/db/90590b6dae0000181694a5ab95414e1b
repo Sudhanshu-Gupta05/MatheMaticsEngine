@@ -1,0 +1,17 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 24-Jan-2018
+ *      Author: sudhanshu
+ */
+
+
+# include "gtest/gtest.h"
+# include "calc.h"
+
+TEST(IntegerFunctionTest, negative) {
+        EXPECT_EQ(1, factorial(-5));
+        EXPECT_EQ(1, factorial(-1));
+        EXPECT_GT(factorial(-10), 0);
+}
+

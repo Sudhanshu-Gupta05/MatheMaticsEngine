@@ -1,0 +1,18 @@
+calc.d: ../calc.cpp ../calc.hpp \
+ /home/sudhanshu/nuTonomy/Calculation_Engines/Singleton.hpp \
+ /home/sudhanshu/nuTonomy/Calculation_Engines/AbstractCalculationEngine.hpp \
+ /home/sudhanshu/nuTonomy/Calculation_Engines/Divider.hpp \
+ /home/sudhanshu/nuTonomy/Calculation_Engines/Multiplier.hpp \
+ /home/sudhanshu/nuTonomy/Calculation_Engines/GenericEngine.hpp
+
+../calc.hpp:
+
+/home/sudhanshu/nuTonomy/Calculation_Engines/Singleton.hpp:
+
+/home/sudhanshu/nuTonomy/Calculation_Engines/AbstractCalculationEngine.hpp:
+
+/home/sudhanshu/nuTonomy/Calculation_Engines/Divider.hpp:
+
+/home/sudhanshu/nuTonomy/Calculation_Engines/Multiplier.hpp:
+
+/home/sudhanshu/nuTonomy/Calculation_Engines/GenericEngine.hpp:

@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CC_SRCS += \
+../unit_test/gtest/gtest-all.cc 
+
+CC_DEPS += \
+./unit_test/gtest/gtest-all.d 
+
+OBJS += \
+./unit_test/gtest/gtest-all.o 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+unit_test/gtest/%.o: ../unit_test/gtest/%.cc
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ -I/home/sudhanshu/nuTonomy/Calculation_Engines -I/home/sudhanshu/nuTonomy/Mathematics/unit_test -I/home/sudhanshu/nuTonomy/Mathematics/includes -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

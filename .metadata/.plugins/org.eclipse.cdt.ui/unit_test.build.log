@@ -1,0 +1,15 @@
+20:47:43 **** Incremental Build of configuration Debug for project unit_test ****
+make all 
+Building file: ../tests/Alltest.cpp
+Invoking: Cross G++ Compiler
+g++ -I/home/sudhanshu/nuTonomy/Mathematics/includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"tests/Alltest.d" -MT"tests/Alltest.d" -o "tests/Alltest.o" "../tests/Alltest.cpp"
+In file included from ../tests/Alltest.cpp:9:0:
+/home/sudhanshu/nuTonomy/Mathematics/includes/calc.hpp:11:10: fatal error: Singleton.hpp: No such file or directory
+ #include "Singleton.hpp"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+tests/subdir.mk:21: recipe for target 'tests/Alltest.o' failed
+make: *** [tests/Alltest.o] Error 1
+
+20:47:44 Build Finished (took 1s.22ms)
+

@@ -1,0 +1,52 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 28-Jan-2018
+ *      Author: sudhanshu
+ */
+
+
+#include "calc.hpp"
+#include "gtest/gtest.h"
+
+/*******Test Data Setup ***************/
+extern int no_of_params;
+extern char **parameters;
+extern int file_list ;
+class MathTest:public ::testing::Test {
+public:
+	virtual void SetUp(){
+		engine.RegisterEngines();
+		operation = filelist;
+		Icalculation_Engine * getCalculationEngine = engine.GetEngines(parameters[1],"integer");
+	}
+	virtual void TearDown() {
+
+	}
+	mathematics::CalcEngineCreation engine;
+	Icalculation_Engine *ptr;
+	int result ;
+	int operation;
+};
+
+// test data setup done
+
+// Test starts
+
+/*
+ * This test whether command line arguments are correctly supplied
+ */
+TEST(Mathematics,start){
+	bool validparams = validCommandLine(no_of_params,parameters);
+	ASSERT_EQ(validparams,true) << "valid args not supplied";
+}
+
+/*
+ * This test whether all different engines are setup properly
+ */
+TEST_F(MathTest,enginesetup){
+	ASSERT_EQ(engine.enginesEnabled,true) << "Calculation start engine failed";
+	auto getCalculationEngine = engine.GetEngines(parameters[1],"integer");
+	ASSERT_NE(getCalculationEngine,nullptr)<< "Engine registration failed";
+}
+

@@ -1,0 +1,18 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 28-Jan-2018
+ *      Author: sudhanshu
+ */
+
+#include <iostream>
+#include "calc.hpp"
+
+
+int main(int argc,char *argv[])
+{
+
+	std::cout << "Running the Application ....." << std::endl;
+	int result = runApp(argc,argv);
+
+}
